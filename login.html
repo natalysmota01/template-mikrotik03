@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Nataly S. Mota">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Empresa especializada em prover internet.">
+	<meta name="keywords" content="Provedor, Provedor de Internet, Internet Banda Larga">
+	<title>Empresa - Início</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<style type="text/css">
+	* {margin: 0; padding: 0; border: none; box-sizing: border-box;}
+	a {text-decoration: none;}
+	.content {width: 100%; float: left;}
+	hr {width: 30px; margin: 15px auto 0 auto; border: 1px solid #104E8B;}
+
+	/*========== HEADER ==========*/
+	.content .header {width: 100%; float: left; padding: 20px 0;}
+	.content .header .logotipo {width: 180px; margin: 0 auto;}
+	.content .header .logotipo img {width: 100%;}
+
+	/*=== LOGIN MIKROTIK ===*/
+	.content .header .login-mikrotik {width: 90%; padding: 0; margin: 20px auto 0 auto; border: 1px solid #CCC;}
+	.content .header .login-mikrotik table {width: 100%;}
+    .content .header .login-mikrotik table tr td form table {padding: 0 10px 5px 10px;}
+    .content .header .login-mikrotik table tr td form table tr td {color: #363636; font-family: sans-serif; display: block; margin-top: 13px;
+    														font-size: .9em;}
+    .content .header .login-mikrotik table tr td form table tr td input {width: 100%; border: 1px solid #BBBBBB; padding: 5px 0 5px 5px;
+    																		font-size: 14px; margin-top: -10px;}
+    .content .header .login-mikrotik table tr td form table tr td input[type="submit"] {width: 100%; padding: 8px 0; font-size: 1em;
+    																			background-color: #104E8B; color: #FFF; border: none;}
+    .content .header .login-mikrotik table tr td form table tr td input[type="submit"]:hover {cursor: pointer; background-color: #1874CD;}
+
+	/*========== SLIDESHOW ==========*/
+	.content .slideshow {width: 100%; float: left;}
+	.content .slideshow .slides {width: 100%; float: left; padding: 0; margin: 0;}
+	.content .slideshow .slides img {width: 100%;}
+	.content .slide {display: none;}
+
+	/*========== AVAILABLE PLANS ==========*/
+	.content .available-plans {width: 100%; float: left;}
+	.content .available-plans header {text-align: center; font-size: 2.2em; font-family: sans-serif; text-transform: uppercase; color: #333;}
+	.content .available-plans .plans {width: 90%; margin: 0 auto; padding: 50px 0;}
+	.content .available-plans .plans .plan {width: 100%; margin-top: 50px; text-align: center; padding: 20px 0; background-color: #E8E8E8;
+											border-radius: 5px;}
+	.content .available-plans .plans .plan .type-plan {width: 100%; font-size: 1.7em; padding: 10px; font-weight: bold; font-family: sans-serif;
+														color: #009ACD;}
+	.content .available-plans .plans .plan .price-plan {padding: 10px; font-size: 1.9em; font-weight: bold; font-family: sans-serif; color: #363636;}
+	.content .available-plans .plans .plan .price-plan span {font-size: .7em;}
+	.content .available-plans .plans .plan .description-plan {width: 100%; padding: 10px; line-height: 25px;}
+	.content .available-plans .plans .plan .description-plan p {text-transform: uppercase; font-size: .9em; color: #333;}
+	.content .available-plans .plans .plan .description-plan p:before {content: "\203A";}
+	.content .available-plans .plans .plan .btn-sign {width: 100%; margin-top: 20px;}
+	.content .available-plans .plans .plan .btn-sign a {width: 160px; display: block; margin: 0 auto; background-color: #104E8B; padding: 6px 0;
+														border: 0; color: #FFF; font-family: 'Arial', sans-serif; font-size: 1.2em; }
+	.content .available-plans .plans .plan .btn-sign a:hover {background-color: #1874CD;}
+
+	/*========== CONTACT ==========*/
+	.content .contact {width: 100%; float: left; padding: 80px 0; background-image: url(img/wallpaper.jpg);}
+	.content .contact header {text-align: center; font-size: 3em; color: #CCC; font-family: sans-serif; font-weight: bold;}
+	.content .contact p {text-align: center; font-family: 'Arial', sans-serif; margin-top: 10px; color: #FFF; font-size: 1.2em;}
+	.content .contact .btn-call {width: 100%;}
+	.content .contact .btn-call a {width: 260px; display: block; margin: 50px auto 0 auto; padding: 15px 0; background-color: #104E8B;
+									text-align: center; font-size: 1.5em; color: #FFF; font-family: sans-serif;}
+	.content .contact .btn-call a:hover {background-color: #1874CD;}
+
+	/*========== FOOTER ==========*/
+	.content footer {width: 100%; float: left; padding: 30px 0 10px 0; background-color: rgb(9, 43, 77); border-top: 3px solid rgb(240, 35, 13);}
+	.content footer .networking {width: 130px; margin: 0 auto; text-align: center;}
+	.content footer .networking img {width: 24px; margin: 0 5px;}
+	.content footer .copyright {padding-top: 20px;}
+	.content footer .copyright p {text-align: center; color: #CCC; font-family: 'Arial', sans-serif; font-size: .9em;}
+
+	/*========== RESPONSIVE ==========*/
+	@media screen and (min-width: 320px) {
+		.content .header .login-mikrotik {width: 280px;}
+	}
+	@media screen and (min-width: 640px) {
+		.content .header .logotipo {float: left; margin: 40px 0 0 5%;}
+		.content .header .login-mikrotik {float: right; margin: 0 5% 0 0;}
+		.content .available-plans .plans {width: 100%; float: left;}
+		.content .available-plans .plans .plan {width: 46%; float: left; margin-left: 2.5%;}
+	}
+	@media screen and (min-width: 800px) {
+		.content .available-plans .plans .plan {width: 30%;}
+	}
+	@media screen and (min-width: 980px) {
+		.content .available-plans .plans .plan {width: 23%; margin-left: 1.6%;}
+	}
+	@media screen and (min-width: 1280px) {
+		.content {width: 1280px; float: none; margin: 0 auto;}
+	}
+</style>
+<body>
+
+	$(if chap-id)
+		<form name="sendin" action="$(link-login-only)" method="post">
+			<input type="hidden" name="username" />
+			<input type="hidden" name="password" />
+			<input type="hidden" name="dst" value="$(link-orig)" />
+			<input type="hidden" name="popup" value="true" />
+		</form>
+		
+		<script type="text/javascript" src="/md5.js"></script>
+		<script type="text/javascript">
+		<!--
+		    function doLogin() {
+			document.sendin.username.value = document.login.username.value;
+			document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+			document.sendin.submit();
+			return false;
+			}
+		//-->
+		</script>
+	$(endif)
+
+	<div class="content">
+		<header class="header">
+			<figure class="logotipo">
+				<a href="#" title="">
+					<img src="img/logo.jpg" alt="" title="" />
+				</a>
+			</figure>
+
+			<div class="login-mikrotik">
+				<table>
+					<tr>
+						<td>
+							<form name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" $(endif)>
+								<input type="hidden" name="dst" value="$(link-orig)" />
+								<input type="hidden" name="popup" value="true" />
+
+								<table>
+									<tr>
+										<td><input name="username" type="text" value="$(username)" placeholder="Login" /></td>
+									</tr>
+									<tr>
+										<td><input name="password" type="password" placeholder="Senha" /></td>
+									</tr>
+									<tr>
+										<td><input type="submit" value="Entrar" /></td>
+									</tr>
+								</table>
+							</form>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</header>
+
+		<section class="slideshow">
+			<figure class="slides">
+				<img class="slide w3-animate-top" src="img/banner1.jpg" alt="" title="" />
+				<img class="slide w3-animate-bottom" src="img/banner2.jpg" alt="" title="" />
+			</figure>
+		</section>
+
+		<div class="available-plans">
+			<section class="plans">
+				<header>Conheça nosso<br/>Planos Disponíveis</header>
+				<hr>
+
+				<article class="plan">
+					<div class="type-plan">2 MEGA + WI-FI</div>
+					<div class="price-plan">
+						R$40,00<span>/mês</span>
+					</div>
+					<div class="description-plan">
+						<p>Descrição do plano</p>
+						<p>Descrição do plano</p>
+						<p>Descrição do plano</p>
+						<p>Descrição do plano</p>
+						<p>Descrição do plano</p>
+					</div>
+					<div class="btn-sign">
+						<a href="tel: 00000000000" title="">Assinar</a>
+					</div>
+				</article>
+
+				<article class="plan">
+					<div class="type-plan">2 MEGA + WI-FI</div>
+					<div class="price-plan">
+						R$40,00<span>/mês</span>
+					</div>
+					<div class="description-plan">
+						<p>Descrição do plano</p>
+						<p>Descrição do plano</p>
+						<p>Descrição do plano</p>
+						<p>Descrição do plano</p>
+						<p>Descrição do plano</p>
+					</div>
+					<div class="btn-sign">
+						<a href="tel: 00000000000" title="">Assinar</a>
+					</div>
+				</article>
+
+				<article class="plan">
+					<div class="type-plan">2 MEGA + WI-FI</div>
+					<div class="price-plan">
+						R$40,00<span>/mês</span>
+					</div>
+					<div class="description-plan">
+						<p>Descrição do plano</p>
+						<p>Descrição do plano</p>
+						<p>Descrição do plano</p>
+						<p>Descrição do plano</p>
+						<p>Descrição do plano</p>
+					</div>
+					<div class="btn-sign">
+						<a href="tel: 00000000000" title="">Assinar</a>
+					</div>
+				</article>
+
+				<article class="plan">
+					<div class="type-plan">2 MEGA + WI-FI</div>
+					<div class="price-plan">
+						R$40,00<span>/mês</span>
+					</div>
+					<div class="description-plan">
+						<p>Descrição do plano</p>
+						<p>Descrição do plano</p>
+						<p>Descrição do plano</p>
+						<p>Descrição do plano</p>
+						<p>Descrição do plano</p>
+					</div>
+					<div class="btn-sign">
+						<a href="tel: 00000000000" title="">Assinar</a>
+					</div>
+				</article>
+			</section>
+		</div>
+
+		<section class="contact">
+			<header>Mude agora! Ligue para:</header>
+			<p>Teremos prazer em ajudá-lo a escolher o melhor plano para suas necessidades!</p>
+			<div class="btn-call">
+				<a href="tel: 00000000000" title="">(00) 0 0000-0000</a>
+			</div>
+		</section>
+
+		<footer>
+			<figure class="networking">
+				<a href="http://facebook.com/" title="Facebook Empresa">
+					<img src="img/icon-facebook.png" title="Facebook Empresa" alt="Facebook Empresa" />
+				</a>
+
+				<a href="http://instagram.com/"/" title="Instagram Empresa">
+					<img src="img/icon-instagram.png" title="Facebook Empresa" alt="Facebook Empresa" />
+				</a>
+
+				<a href="http://twitter.com/"/" title="Twitter Empresa">
+					<img src="img/icon-twitter.png" title="Facebook Empresa" alt="Facebook Empresa" />
+				</a>
+			</figure>
+
+			<div class="copyright">
+				<p>Empresa &copy; 2019 - Todos os direitos reservados</p>
+			</div>
+		</footer>
+	</div>
+
+	<script type="text/javascript">
+		var index = 0;
+		carousel();
+
+		function carousel() {
+			var i;
+			var x = document.getElementsByClassName("slide");
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";
+			}
+			index++;
+
+			if(index > x.length) {index = 1}
+			x[index - 1].style.display = "block";
+			setTimeout(carousel, 2500);
+		}
+	</script>
+</body>
+</html>
